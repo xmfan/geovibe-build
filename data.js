@@ -16,7 +16,7 @@ $(function() {
   })
 
   setInterval(periodicDataPull, 30000);
-})0;
+});
 
 function periodicDataPull() {
   $.get("http://10.8.86.139:5000/events", function(res) {
