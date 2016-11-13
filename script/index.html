@@ -1,0 +1,20 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script>
+  $.get('sample.js', function(res) {
+    var csvContent = "data:text/csv;charset=utf-8,";
+
+    articles_array = data.response;
+    for (var i in articles_array) {
+      var article = articles_array[i];
+
+      var lat = article.lat;
+      var lng = article.long;
+      var sen = article.sentiment * 10000;
+
+      csvContent += lat + ',' + lng + ',' + sen + '\n';
+    }
+
+    var encodedUri = encodeURI(csvContent);
+    window.open(encodedUri);
+  });
+</script>
