@@ -15,8 +15,8 @@ $(function() {
     if (drag == true) $("#news-panel").hide();
   })
 
-  setInterval(periodicDataPull, 3000);
-});
+  setInterval(periodicDataPull, 30000);
+})0;
 
 function periodicDataPull() {
   $.get("http://10.8.86.139:5000/events", function(res) {
@@ -53,10 +53,8 @@ function generateImages(articles) {
   for (var i in articles) {
     var article = articles[i];
 
-    console.log(article.lat + ' ' + article.long);
     var lat = article.lat; //+ Math.random();
     var lng = article.long; //+ Math.random();
-    console.log(article.lat + ' ' + article.long);
 
     images.push({
       "svgPath": targetSVG,
