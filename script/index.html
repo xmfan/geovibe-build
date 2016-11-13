@@ -1,15 +1,15 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script>
-  $.get('data.txt', function(res) {
+  $.get('sample.js', function(res) {
     var csvContent = "data:text/csv;charset=utf-8,";
 
-    articles_array = JSON.parse(res).response;
+    articles_array = data.response;
     for (var i in articles_array) {
       var article = articles_array[i];
 
       var lat = article.lat;
       var lng = article.long;
-      var sen = article.sentiment * 3000;
+      var sen = article.sentiment * Math.random() * 2000;
 
       csvContent += lat + ',' + lng + ',' + sen + '\n';
     }
