@@ -1,17 +1,26 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Geovibes</title>
-  <base href="/">
+    <title>Geovibes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-  <script src="assets/js/jquery-3.1.1.min.js"></script>
-  <script src="assets/js/smartjava-three.min.js"></script>
+
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="template.js"></script>
+    <script src="data.js"></script>
 </head>
 <body>
-  <app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+    <div id="chartdiv"></div>
+    <div id="news-panel" hidden="true"><h1>Geovibes</h1></div>
+</body>
 </html>
